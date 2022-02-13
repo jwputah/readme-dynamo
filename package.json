@@ -1,0 +1,22 @@
+{
+  "name": "readme-dynamo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwputah/readme-dynamo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jwputah/readme-dynamo/issues"
+  },
+  "homepage": "https://github.com/jwputah/readme-dynamo#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  }
+}
