@@ -1,12 +1,10 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generatePage = require('./utils/generateMarkdown');
+const generatePage = require('./develop/utils/generateMarkdown.js');
 
 
 // TODO: Create an array of questions for user input
-const answers = [];
-
 const promptUser = () => {
     return inquirer.prompt([
         {
@@ -37,7 +35,7 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'Title',
+            name: 'title',
             message: 'What is the title of your project? (Required)',
             validate: titleInput => {
                 if (titleInput) {
@@ -50,7 +48,7 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'Description',
+            name: 'description',
             message: 'Provide a description of the project (Required)',
             validate: descriptionInput => {
                 if (descriptionInput) {
@@ -63,7 +61,7 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'Install',
+            name: 'install',
             message: 'What are the steps required to install you project? (Required)',
             validate: installInput => {
                 if (installInput) {
@@ -76,7 +74,7 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'Usage',
+            name: 'usage',
             message: 'How does the user interact with the application? (Required)',
             validate: usageInput => {
                 if (usageInput) {
@@ -89,7 +87,7 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'Contributors',
+            name: 'contributors',
             message: 'Enter contributions for the project (Required)',
             validate: contributionsInput => {
                 if (contributionsInput) {
@@ -112,8 +110,8 @@ const promptUser = () => {
             message: 'What kind of license should your project have?',
             choices: ['MIT', 'GNU'],
             default: ["MIT"],
-            validate: nameInput => {
-                if (nameInput) {
+            validate: licenseInput => {
+                if (licenseInput) {
                     return true;
                 } else {
                     console.log('Please choose a license!');
@@ -146,7 +144,7 @@ promptUser()
 })
 // function for data to writefile in markdown
     .then(data => {
-        console.log(answers);
+        // console.log(answers);
         return writeFile(data);
 })
 // function to catch errors
