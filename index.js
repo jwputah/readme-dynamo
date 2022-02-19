@@ -3,7 +3,6 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const generatePage = require('./develop/utils/generateMarkdown.js');
 
-
 // TODO: Create an array of questions for user input
 const promptUser = () => {
     return inquirer.prompt([
@@ -108,8 +107,8 @@ const promptUser = () => {
             type: 'list',
             name: 'license',
             message: 'What kind of license should your project have?',
-            choices: ['MIT', 'GNU'],
-            default: ["MIT"],
+            choices: ['MIT', 'GNU', 'BSD', 'Apache', 'None'],
+            default: ["None"],
             validate: licenseInput => {
                 if (licenseInput) {
                     return true;
@@ -144,7 +143,7 @@ promptUser()
 })
 // function for data to writefile in markdown
     .then(data => {
-        // console.log(answers);
+        // console.log(data);
         return writeFile(data);
 })
 // function to catch errors
