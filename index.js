@@ -61,54 +61,32 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'install',
-            message: 'What are the steps required to install you project? (Required)',
-            validate: installInput => {
-                if (installInput) {
-                    return true;
-                } else {
-                    console.log('Please enter required steps to install project!');
-                    return false;
-                }
-            }
+            message: 'What are the steps required to install you project?',
+            // default: ''
         },
         {
             type: 'input',
             name: 'usage',
-            message: 'How does the user interact with the application? (Required)',
-            validate: usageInput => {
-                if (usageInput) {
-                    return true;
-                } else {
-                    console.log('Please enter a description of usage for app!');
-                    return false;
-                }
-            }
+            message: 'How does the user interact with the application?',
+            // default: ''
         },
         {
             type: 'input',
             name: 'contributors',
-            message: 'Enter contributions for the project (Required)',
-            validate: contributionsInput => {
-                if (contributionsInput) {
-                    return true;
-                } else {
-                    console.log('Please enter any contributors to the project!');
-                    return false;
-                }
-            }
+            message: 'Enter contributions for the project.',
+            // default: ''
         },
         {
             type: 'input',
             name: 'test',
             message: 'What command to run tests?',
-            default: 'npm test'
+            // default: ''
         },
         {
             type: 'list',
             name: 'license',
             message: 'What kind of license should your project have?',
             choices: ['MIT', 'GNU', 'BSD', 'Apache', 'None'],
-            default: ["None"],
             validate: licenseInput => {
                 if (licenseInput) {
                     return true;

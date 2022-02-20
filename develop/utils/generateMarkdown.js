@@ -134,7 +134,7 @@ ${renderLicenseSection(data.license)}
 #### Questions
 Any questions? You can contact me directly at ${data.email}
 
-Or visit my github [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/${data.github})
+Or visit my [![GitHub](https://badgen.net/badge/icon/github?icon=github&label)](https://github.com/${data.github})
 `;
 }
 
