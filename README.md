@@ -30,7 +30,7 @@ Clone repository from Github. Inquirer package required.
 #### Usage
 Node from command line. Answer questions about project. And a high quality README.md file will be created.
 
-![Screencastify](./develop/utils/.screencastify.gif)
+![Screencastify](./develop/utils/screencastify.gif)
 
 ----
 
